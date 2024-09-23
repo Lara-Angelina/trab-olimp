@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Fale conosco!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trabalho escolar sobre olimpíadas 2024">
+    <meta name="keywords" content="Trabalho, olimpíadas, vôlei, esportes">
+    <meta name="author" content="Lara Silva">
+    <link rel="icon" type="image/icon" href="img/bolavolei-icon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script language="javascript" type="text/javascript">
+        function validar() {
+            var nome = contato.nome.value;
+            var email = contato.email.value;
+            var data = contato.data.value;
+            var feedback = contato.feedback.value;
+            if (nome == "") {
+                alert('Preencha o campo com seu nome!');
+                contato.nome.focus();
+                return false;
+            }
+            if (email == "") {
+                alert('Preencha o campo com seu email!');
+                contato.email.focus();
+                return false;
+            }
+            if (data == "") {
+                alert('Insira a data em que acessou o site!');
+                contato.data.focus();
+                return false;
+            }
+            if (feedback == "") {
+                alert('Dê seu feedback!');
+                contato.feedback.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <h1><img src="img/simb-olimp.png"></h1>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="destaque.html">Destaque</a></li>
+            <li><a href="desafios.html">Desafios</a></li>
+            <li><a href="medalhas.html">Medalhas</a></li>
+            <li><a href="contato.html" class="ativa">Contato</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div id="form-contato">
+        <form name="contato" action="confirmacaocontato.html" method="get">
+            <input id="nome" name="nome" type="text" placeholder="Seu nome:">
+            <input name="email" type="text" placeholder="Seu e-mail:">
+            <input type="text" name="data" placeholder="Data de cadastro:" onfocus="(this.type='date')">
+            <select id="feedback" name="feedback" placeholder="Deixe aqui sua satisfação com o site:">
+                <option disabled selected value=""> Deixe aqui sua satisfação com o site:</option>
+                <!--impede o usuário de escolher essa opção-->
+                <option value="1">★☆☆☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="4">★★★★☆</option>
+                <option value="5">★★★★★</option>
+            </select>
+            <textarea cols="41" rows="4" name="comentario"
+                placeholder="Deixe seu comentário sobre o site (Opcional):"></textarea>
+            <div class="bot-contato">
+                <input type="submit" value="Enviar" onclick="return validar()">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+    </div>
+    <br><hr><br>
+    <div id="footer">
+        <h5>Lara Silva 2024 - &copyTodos os direitos reservados<br>Trabalho acadêmico sem fins lucrativos</h5>
+    </div>
+</body>
+</html>

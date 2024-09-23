@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); /*código de importação da fonte 'Raleway'*/
+*{
+        margin: 0px;
+        padding: 0px;
+}
+body{
+        background-color: rgb(25, 25, 92);
+        font-family: "Raleway", sans-serif;
+        max-width: 900px; /*tamanho máximo de comprimento*/
+        min-height: 100vh; /*tamanho mínimo de altura*/
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+        color: white;
+}
+#header{
+        max-height: 140px; /*tamanho máximo de altura*/
+        display: flex;
+        flex-direction: row;
+}
+#header h1{
+                display: block; /*bloqueia quebra de linha*/
+                float: left; /*parte do texto do menu fica flutuando do lado do logo*/
+                margin-top: 25px;
+                margin-left: 25px;
+}
+#header nav ul{
+        list-style-type: none;
+}
+#menu{
+        list-style: none; /*tira marcadores (bolinhas de tópico) do texto do menu*/
+        padding-left: 0px;
+        display: block;
+        float: left; /*flutua à esquerda*/
+        margin-top: 30px;
+}
+#menu li{
+        float: left; /*elementos ficam lado a lado flutuando à esquerda*/
+        margin-left: 65px; /*distância entre os elementos do menu*/
+}
+#menu a{/*mexe nas letras do menu*/
+        text-decoration: none; /*retira marcadores embaixo do texto do menu*/
+        color: rgba(202, 206, 221, 0.8);
+        position: relative;
+}
+#menu a:hover{ /*faz com que o efieto só seja aplicado quando passaro mouse sobre o item do menu*/
+                color: white;
+}
+#menu a::before{ /*traço vermelho com animação ao passar o mouse*/
+                content: "";
+                position: absolute;
+                display: block;
+                width: 0px;
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background-color: #e31741;
+                transition: all ease-in-out 0.3s; /*adiciona uma transição à animação*/
+}
+#menu a:hover::before{ /*quando passar o mouse sobre o link, modifica a barra*/
+                width: 100%;
+}
+ul#menu a.ativa{ /*faz com que o traço vermelho fique aparecendo na página ativa (aberta)*/
+                border-bottom: 2px solid #e31741;     
+                color: white;
+                width: 100%;
+}
+#menu-mobile{
+        background-color: black;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0%;
+        overflow: hidden;
+}
+#menu-mobile nav ul{
+        text-align: right;
+}
+#menu-mobile nav ul li a{
+        color: rgba(202, 206, 221, 0.8);
+        font-size: 20px;
+        padding: 15px 4%;
+        display: block;
+}
+#menu-mobile nav ul li a:hover{
+        background-color: #e31741;
+}
+#menu-mobile bot-fechar{
+        width: 30px;
+        height: auto;
+        padding: 15px 4%;
+}
+#conteudo{
+                height: 80vh;
+                display: flex;
+                justify-content: center; /* centraliza horizontalmente */
+                align-items: center; /* centraliza verticalmente */
+                flex-direction: column; /* alinha os itens em coluna */
+}
+#conteudo h1{
+                font-size: 40px;
+                color: yellow;
+}
+#sobre{
+        margin-top: 20px;
+        margin-bottom: 20px;
+}
+#sobre h1{
+        color: #ffe603;
+}
+#sobre p{
+        margin-top: 7px;
+}
+#selecao-fem{
+        display: flex;
+        align-items: center;
+        margin-top: 7px;
+}
+#selecao-fem li{
+        margin-left: 50px;
+}
+#selecao-masc{
+        display: flex;
+        align-items: center;
+        margin-top: 7px;
+}
+#selecao-masc li{
+        margin-left: 50px;
+}
+#destaque{
+        margin-top: 20px;
+        margin-bottom: 20px;
+}
+#destaque h1{
+        color: #ffe603;
+        font-size: 33px;
+}
+#destaque h2{
+        color: rgb(41, 236, 41);
+}
+#destaque h3{
+        color: #ffe603;
+        font-size: 33px;
+        margin-top: 10px;
+}
+#destaque p{
+        margin-top: 7px;
+}
+#desafios{
+        margin-top: 20px;
+        margin-bottom: 20px;
+}
+#desafios h1{
+        color: #ffe603;
+        display: flex;
+        justify-content: center;
+}
+#fundo-placar{
+        background-color: white;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+        border-radius: 7px;
+}
+#data{
+        background-color: rgb(41, 236, 41);
+        margin-top: 20px;
+        border-radius: 7px;
+    }
+#data h1{
+        color: white;
+        font-size: 43px;
+        display: flex;
+        justify-content: center;
+}
+#placar{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+#placar h1{
+        margin-left: 15px;
+        margin-right: 20px;
+        color: black;
+}
+#placar p{
+        color: black;
+}
+#trofeu{
+        margin-left: 15px;
+        margin-top: 7px;
+}
+#trofeu2{
+        margin-right: 15px;
+        margin-top: 7px;
+}
+.img-text{
+        display: flex;
+        flex-direction: column;
+}
+#medalhas{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+#medalhas h1{
+        color: #ffe603;
+        font-size: 40px;
+}
+#fundo-med{
+        background-color: white;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        border-radius: 7px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+#fundo-med2{
+        background-color: rgb(41, 236, 41);
+        margin-top: 20px;
+        margin-bottom: 15px;
+        border-radius: 7px;
+        width: 400px;
+}
+#lugar1{
+        background-color: rgb(41, 236, 41);
+        border-radius: 7px;
+        width: 500px;
+}
+#lugar2{
+        background-color: rgb(41, 236, 41);
+        border-radius: 7px;
+        width: 400px;
+}
+#lugar1 h1{
+        color: rgb(172, 148, 18);
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+}
+#lugar2 h2{
+        color: rgb(118, 118, 118);
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+}
+#lugar2 h3{
+        color: brown;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+}
+#agrupamento{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px; /*espaçamento entre divs*/
+        
+}
+#pais1{
+        background-color: rgb(41, 236, 41);
+        border-radius: 7px;
+        width: 500px;
+        height: 50px;
+}
+#pais1 h1{
+        color: black;
+        display: flex;
+        justify-content: center;
+        margin-top: 7px;
+}
+#pais2{
+        background-color: rgb(41, 236, 41);
+        border-radius: 7px;
+        width: 400px;
+        height: 40px;
+}
+#pais2 h1{
+        color: black;
+        display: flex;
+        justify-content: center;
+        margin-top: 7px;
+}
+#pais3{
+        background-color: rgb(41, 236, 41);
+        border-radius: 7px;
+        width: 400px;
+        height: 40px;
+}
+#pais3 h1{
+        color: black;
+        display: flex;
+        justify-content: center;
+        margin-top: 7px;
+}
+#footer{
+                text-align: center;
+}
+
+#form-contato{
+                max-width: 500px;
+                margin: 0px auto;
+                justify-content: center;
+}
+form input#nome {
+                margin-top: 40px;
+}
+form input, textarea, select{
+                                width: 100%;
+                                background-color: #202020;
+                                border: 0; /*retira a borda em volta das caixas do formulário*/
+                                outline: 0; /*tira o contorno quando se clica nas caixas*/
+                                padding: 20px 15px;
+                                border-radius: 15px;
+                                color: #ffe603;
+                                font-size: 18px;
+                                font-family: "Raleway", sans-serif;
+                                margin-bottom: 7px; /*aplica distanciamento entre os itens do formulário*/
+}
+form input::placeholder{
+                        color: #ffe603;
+}
+form select#feedback{
+                        width: 531px;
+}
+form textarea::placeholder{
+                        color: #ffe603;
+}
+.bot-contato{
+                text-align: center;
+}
+.bot-contato input{
+                        width: 120px;
+                        padding: 10px 20px;
+                        background-color: #71660000;
+                        border: solid 3px #ffe603;
+                        border-radius: 50px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        margin-left: 10px; /*distância entre botões*/
+}
+textarea{
+        resize: none;
+}
+#confirmacao{
+                height: 80vh;
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
+}
+#confirmacao h1{
+        color: #ffe603;
+        font-size: 40px;
+}
+@media screen and (min-width: 330px) and (max-width: 869px) {
+        #menu{
+                display: none;
+        }
+}
+@media screen and (min-width: 870px) {
+        #menu {
+            display: block; /* ou flex, dependendo do seu layout */
+        }
+        #menu-mobile{
+                display: block;
+        }
+    }
